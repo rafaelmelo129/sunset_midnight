@@ -1,0 +1,87 @@
+body {
+    background-image: linear-gradient(45deg, black, purple);
+    height: 100vh;
+    font-family: monaco, monospace;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titulo {
+    text-align: center;
+    height: 100px;
+    padding: 30px;
+}
+
+.game {
+    width: 55%;
+    height: 495px;
+    border-bottom: 25px solid #04141c;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url(./Sunset.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.hadouken {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    padding: 30px;
+    animation: hadouken-animation 2s infinite linear;
+}
+
+.boy {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump_up {
+    animation: jump 500ms ease-out;
+}
+
+.rodape{
+    color: white;
+    height: 50px;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+}
+
+@keyframes hadouken-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
